@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" et-al-min="3" et-al-use-first="1" demote-non-dropping-particle="never" default-locale="en-US">
+  <info>
+    <title>ISO-690 (author-date, English) - NVNA All Authors + Archive Link</title>
+    <id>https://example.org/styles/iso690-author-date-en-NVNA-archive-link</id>
+    <link href="http://www.zotero.org/styles/iso690-author-date-en" rel="self"/>
+    <link href="https://forums.zotero.org/discussion/20342" rel="documentation"/>
+    <link href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=43320" rel="documentation"/>
+    <author>
+      <name>Laure Mellifluo</name>
+      <email>laure.melli@gmail.com</email>
+    </author>
+    <author>
+      <name>Raphael Grolimund</name>
+      <email>grolimur@protonmail.ch</email>
+    </author>
+    <author>
+      <name>Michel Hardegger</name>
+      <email>hardegger@gmail.com</email>
+    </author>
+    <contributor>
+      <name>Asen Kozhukharov</name>
+      <uri/>
+    </contributor>
+    <contributor>
+      <name>Stoyan Mechev</name>
+      <uri/>
+    </contributor>
+    <category citation-format="author-date"/>
+    <category field="generic-base"/>
+    <summary>Style based on ISO 690:2021(E), v0.1</summary>
+    <updated>2026-10-21T10:05:23+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <locale>
+    <terms>
+      <term name="no date">[no date]</term>
+      <term name="in">in</term>
+      <term name="online">online</term>
+      <term name="accessed">accessed</term>
+      <term name="retrieved">Available</term>
+      <term name="from">from</term>
+    </terms>
+  </locale>
+  <macro name="editor">
+    <names variable="editor">
+      <name name-as-sort-order="all" sort-separator=", " delimiter=", " delimiter-precedes-last="never">
+        <name-part name="family" text-case="uppercase"/>
+        <name-part name="given"/>
+      </name>
+      <label prefix=" (" form="short" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="translator">
+    <names variable="translator">
+      <name name-as-sort-order="all" sort-separator=", " delimiter=", " delimiter-precedes-last="never">
+        <name-part name="family" text-case="uppercase"/>
+        <name-part name="given"/>
+      </name>
+      <label prefix=" (" form="long" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="book-editor">
+    <names variable="editor">
+      <name initialize-with=". " delimiter=", " delimiter-precedes-last="never">
+        <name-part name="given"/>
+        <name-part name="family" text-case="uppercase"/>
+      </name>
+      <label prefix=" (" form="short" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="book-translator">
+    <names variable="translator">
+      <name initialize-with=". " delimiter=", " delimiter-precedes-last="never">
+        <name-part name="given"/>
+        <name-part name="family" text-case="uppercase"/>
+      </name>
+      <label prefix=" (" form="long" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="responsability">
+    <names variable="author">
+      <name name-as-sort-order="all" sort-separator=", " delimiter=", " delimiter-precedes-last="never">
+        <name-part name="family" text-case="uppercase"/>
+        <name-part name="given"/>
+      </name>
+      <substitute>
+        <text macro="editor"/>
+        <text macro="translator"/>
+        <text macro="title"/>
+      </substitute>
+    </names>
+    <choose>
+      <if variable="author editor translator" match="any">
+        <text macro="year-date" prefix=", "/>
+      </if>
+    </choose>
+  </macro>
+  <macro name="author-citation">
